@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oLB-yp-AYR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="GU2-dM-Dvy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oLB-yp-AYR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SGj-G2-tpD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mNs-vD-8dM" kind="relationship" relationship="rootViewController" id="RzW-De-otM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A8a-Iq-49l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-277" y="139"/>
+        </scene>
+        <!--ITPATH Apple Pay-->
+        <scene sceneID="5Ez-Mg-jGS">
+            <objects>
+                <viewController storyboardIdentifier="ApplePayViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mNs-vD-8dM" customClass="ApplePayViewController" customModule="ApplePayIPS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eMo-T2-4Sd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shoe Store" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBw-n4-VyU">
+                                <rect key="frame" x="32" y="120" width="350" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="iqq-2l-cxA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a shoe to buy." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="men-fZ-u9t">
+                                <rect key="frame" x="32" y="172" width="350" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="HUu-hY-iRX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ik4-Z1-iip">
+                                <rect key="frame" x="0.0" y="212" width="414" height="272.5"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufx-kF-JeU">
+                                <rect key="frame" x="151" y="537.5" width="112.5" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="d7r-um-fLI"/>
+                                    <constraint firstAttribute="width" secondItem="Ufx-kF-JeU" secondAttribute="height" multiplier="2.5" id="osq-hI-xEd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Buy Shoe"/>
+                                <connections>
+                                    <action selector="buyShoeTapped:" destination="mNs-vD-8dM" eventType="touchUpInside" id="0Lh-ou-nOj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price: $110.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAz-J9-2H3">
+                                <rect key="frame" x="32" y="500.5" width="350" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pnF-ON-1Fr"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ufx-kF-JeU" firstAttribute="centerX" secondItem="eMo-T2-4Sd" secondAttribute="centerX" id="3N5-z7-BeI"/>
+                            <constraint firstItem="ik4-Z1-iip" firstAttribute="leading" secondItem="eMo-T2-4Sd" secondAttribute="leading" id="776-Hh-yow"/>
+                            <constraint firstItem="pnF-ON-1Fr" firstAttribute="trailing" secondItem="BBw-n4-VyU" secondAttribute="trailing" constant="32" id="7xa-nT-jD7"/>
+                            <constraint firstItem="zAz-J9-2H3" firstAttribute="top" secondItem="ik4-Z1-iip" secondAttribute="bottom" constant="16" id="E1C-d4-yue"/>
+                            <constraint firstItem="BBw-n4-VyU" firstAttribute="top" secondItem="pnF-ON-1Fr" secondAttribute="top" constant="32" id="Ks4-bj-FOQ"/>
+                            <constraint firstItem="pnF-ON-1Fr" firstAttribute="trailing" secondItem="men-fZ-u9t" secondAttribute="trailing" constant="32" id="LF3-W2-E4U"/>
+                            <constraint firstItem="BBw-n4-VyU" firstAttribute="leading" secondItem="pnF-ON-1Fr" secondAttribute="leading" constant="32" id="R9h-xQ-8Ve"/>
+                            <constraint firstItem="pnF-ON-1Fr" firstAttribute="trailing" secondItem="ik4-Z1-iip" secondAttribute="trailing" id="Ud6-74-8X1"/>
+                            <constraint firstItem="men-fZ-u9t" firstAttribute="top" secondItem="BBw-n4-VyU" secondAttribute="bottom" constant="16" id="Wmy-Zi-pXQ"/>
+                            <constraint firstItem="Ufx-kF-JeU" firstAttribute="centerY" secondItem="eMo-T2-4Sd" secondAttribute="centerY" multiplier="1.25" id="b4E-OO-Jjt"/>
+                            <constraint firstItem="Ufx-kF-JeU" firstAttribute="top" secondItem="zAz-J9-2H3" secondAttribute="bottom" constant="16" id="i8E-sm-dBG"/>
+                            <constraint firstItem="ik4-Z1-iip" firstAttribute="top" secondItem="men-fZ-u9t" secondAttribute="bottom" constant="16" id="iqj-pb-qd4"/>
+                            <constraint firstItem="men-fZ-u9t" firstAttribute="leading" secondItem="pnF-ON-1Fr" secondAttribute="leading" constant="32" id="jiY-MD-TFI"/>
+                            <constraint firstItem="pnF-ON-1Fr" firstAttribute="trailing" secondItem="zAz-J9-2H3" secondAttribute="trailing" constant="32" id="p4a-BK-pF5"/>
+                            <constraint firstItem="zAz-J9-2H3" firstAttribute="leading" secondItem="pnF-ON-1Fr" secondAttribute="leading" constant="32" id="yD6-3E-VyF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ITPATH Apple Pay" id="vea-Ze-XHW"/>
+                    <connections>
+                        <outlet property="priceLabel" destination="zAz-J9-2H3" id="K7M-OA-cRO"/>
+                        <outlet property="shoePickerView" destination="ik4-Z1-iip" id="uGI-fS-Xkx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AXd-92-zkU" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="637.68115942028987" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
